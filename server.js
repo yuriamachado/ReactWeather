@@ -8,10 +8,10 @@ const PORT = process.env.PORT || 3000;
 // res(responsive) = responsive what send back
 // next = when the piece of middleware is done (function)
 app.use(function(req, res, next) {
-  if (req.headers['x-forwarded-proto'] === 'http') {
-    next();
-  } else {
+  if (req.headers['x-forwarded-proto'] === 'https') {
     res.redirect('http://' + req.hostname + req.url);
+  } else {
+    next();
   }
 });
 
@@ -19,5 +19,5 @@ app.use(express.static('public'));
 
 
 app.listen(PORT, function(){
-  console.log('Exporess server is up on port ' + PORT);
+  console.log('Express server is up on port ' + PORT);
 });
