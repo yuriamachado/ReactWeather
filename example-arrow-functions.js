@@ -1,3 +1,4 @@
+//A comment that i made in macbook = ]
 var names = ['Andrew', 'Julie', 'Jen'];
 //
 // //Modo tradicional de fazer um forEach
